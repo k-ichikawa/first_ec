@@ -1,0 +1,35 @@
+<h1>Listing cards</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Product</th>
+      <th>Name</th>
+      <th>Kana</th>
+      <th>Num</th>
+      <th>Rarity</th>
+      <th>Image</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cards.each do |card| %>
+      <tr>
+        <td><%= card.id %></td>
+        <td><%= card.product %></td>
+        <td><%= card.name %></td>
+        <td><%= card.kana %></td>
+        <td><%= card.num %></td>
+        <td><%= card.rarity %></td>
+        <td><%= card.image %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to 'お問い合わせフォーム', '/inquiry' %>
+
+
